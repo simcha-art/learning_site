@@ -1,0 +1,118 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --surface-2: #1e293b;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --accent-2: #34d399;
+  --border: #334155;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.shell {
+  width: min(1100px, 96%);
+  margin: 0 auto;
+  padding: 24px 0;
+}
+.topbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.back-link {
+  color: var(--accent-2);
+}
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.chapter-card, .section-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+.chapter-card h3 {
+  margin: 0 0 10px;
+  color: var(--accent-2);
+}
+.chapter-card p {
+  margin: 0 0 12px;
+}
+.chapter-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: var(--accent);
+  border-radius: 12px;
+  color: #0f172a;
+  font-weight: bold;
+}
+.content-box, .output-box, .result-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 12px;
+}
+textarea, input[type=text] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background: #0f172a;
+  color: var(--text);
+  margin-top: 10px;
+  resize: vertical;
+}
+.primary-button {
+  border: none;
+  background: var(--accent-2);
+  color: #0f172a;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.primary-button:hover {
+  opacity: 0.9;
+}
+.quiz-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.quiz-question {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.quiz-question h4 {
+  margin: 0 0 10px;
+}
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+@media (max-width: 720px) {
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+}

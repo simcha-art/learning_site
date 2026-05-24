@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <title>פרק - אתר למידה</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="page shell">
+    <header class="topbar">
+      <div>
+        <a class="back-link" href="/">← חזרה לתפריט הפרקים</a>
+        <h1 id="chapter-title">טוען פרק...</h1>
+        <p id="chapter-subtitle"></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-box">
+        <h2>חומר לימודי</h2>
+        <div id="chapter-content" class="content-box"></div>
+      </section>
+
+      <section class="section-box">
+        <h2>סיכום</h2>
+        <div id="chapter-summary" class="content-box"></div>
+      </section>
+
+      <section class="section-box">
+        <h2>שאלות ל־AI</h2>
+        <p>שאל כל שאלה על החומר או על מושג מסוים בפרק.</p>
+        <textarea id="ai-question-input" rows="4" placeholder="כתוב כאן שאלה על החומר..."></textarea>
+        <button id="ask-ai-button" class="primary-button">שלח שאלה ל‑AI</button>
+        <div id="ai-answer-output" class="output-box"></div>
+      </section>
+
+      <section class="section-box">
+        <h2>מבחן אמריקאי כללי</h2>
+        <div id="general-quiz" class="quiz-box"></div>
+        <button id="general-submit" class="primary-button">בדוק מבחן כללי</button>
+        <div id="general-result" class="result-box"></div>
+      </section>
+
+      <section class="section-box">
+        <h2>מבחן אמריקאי פרטני</h2>
+        <div id="detailed-quiz" class="quiz-box"></div>
+        <button id="detailed-submit" class="primary-button">בדוק מבחן פרטני</button>
+        <div id="detailed-result" class="result-box"></div>
+      </section>
+
+      <section class="section-box">
+        <h2>מבחן שאלות פתוחות</h2>
+        <div id="open-question-area"></div>
+        <button id="open-submit" class="primary-button">בדוק תשובה ב‑AI</button>
+        <div id="open-result" class="result-box"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>המערכת עדיין בשלד; תוכל לשלב את ה‑AI מאוחר יותר.</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
